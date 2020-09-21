@@ -2,15 +2,9 @@
     "name": "Sample Extension",
     "version": "1.0",
     "description": "This is a sample extension!!!",
-    "permissions": [
-        "declarativeContent",
-        "storage"
-    ],
-    "background": {
-        "scripts": [
-            "background.js"
-        ],
-        "persistent": false
-    },
-    "manifest_version": 2
+    "manifest_version": 2,
+    "content_scripts": [{
+        "matches": ["https://github.com/*"],
+        "js": ["content.js"]
+    }]
 }
